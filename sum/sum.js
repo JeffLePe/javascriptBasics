@@ -1,16 +1,12 @@
-var a = process.argv[2];
-var b = process.argv[3];
+var total = 0;
 
-confirma(a, b);
+process.argv.forEach((val, index) => {
+    if(index > 1) {
+        total = sum(process.argv[index], total);
+    }
+});
 
-function confirma(a, b) {
-    if(isNaN(parseFloat(a)) == true || isNaN(parseFloat(b)) == true){
-        console.log("Numero digitado é inválido");
-    }
-    else{
-        console.log("Total: " + sum(a, b));
-    }
-}
+console.log("Total: " + total);
 
 function sum(a, b) {
     return parseFloat(a) + parseFloat(b);
