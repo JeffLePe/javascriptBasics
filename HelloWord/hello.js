@@ -1,10 +1,12 @@
 /*JavaSacript Basics Part I*/
-var name = getName();
-console.log("Hi there! " +  name);
-console.log("Variavel do tipo: " + typeof name);
+sayHello(getName());
 
 function getName() {
     return process.argv[2] || "";
 }
 
+function sayHello(name) {
+    console.log("Hi there! " +  name);
+    console.log("Variavel do tipo: " + typeof name);
+}
 
